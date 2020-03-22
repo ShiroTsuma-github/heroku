@@ -6,4 +6,4 @@ def home(request):
     return HttpResponse('<h1>Vending Machine</h1>')
 
 def about(request):
-    return HttpResponse('<h1>Vending Machine About</h1>')
+    return HttpResponse('<h1>First Project for School</h1>')
