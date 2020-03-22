@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+import requests
 from .models import Greeting
 
 # Create your views here.
 def index(request):
-    # return HttpResponse('Hello from Python!')
-    return render(request, "index.html")
+    r =open('test.html','wb')
+    print(r)
+    return HttpResponse(r)
+    r.close()
+
 
 
 def db(request):
