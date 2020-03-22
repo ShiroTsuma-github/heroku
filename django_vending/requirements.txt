@@ -1,3 +1,5 @@
-docopt==0.6.2
-bob-builder==0.0.17
-boto==2.48.0
+django
+requests
+sqlite3
+gunicorn
+heroku
