@@ -1,5 +1,0 @@
-django
-requests
-sqlite3
-gunicorn
-heroku
