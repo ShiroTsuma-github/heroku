@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {%if title%}
-        <title>Django Homepage = {{title}}</title>
-    {%else%}
-        <title>Django Homepage</title>
-    {%endif%}
-
-</head>
-<body>
-    <h1><center>Strona Główna na Przyszłe Projekty</center></h1>
-    <h1><center>Tomasz Góralski</center></h1>
+{%extends "homepage/base.html"%}
+  {%block content%}
+    <article class="media content-section">
+        <div class="media-body">
+            <h1><center>Wymiana Informacji</center></h1>
+        </div>
+    </article>
     {%for post in posts%}
-    <h1>{{ post.title}}</h1>
-    <p>By {{post.author}} on {{post.date_posted}}</p>
-    <p>{{post.content}}</p>
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted|date:"G:i,D. n . Y" }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
     {%endfor%}
-</body>
-</html>
+ 
+{%endblock content%} 
