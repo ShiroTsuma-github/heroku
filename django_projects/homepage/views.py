@@ -12,5 +12,3 @@ def about(request):
     return render(request,'homepage/about.html',{'title': 'Informacje'})
 def projects(request):
     return render(request,'homepage/projects.html',{'title': 'Projekty'})
-def profile(request):
-    return render(request,'homepage/profile.html',{'title': 'Profil'})
