@@ -74,13 +74,31 @@ a.article-title:hover {
   vertical-align: middle;
 }
 
-.account-img {
-  height: 125px;
-  width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
-}
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(32, 32, 32, 0.781);
+}
+
+.list2 {
+  float: left;
+}
+.test{
+  font-size: 4rem;
+}
+.not-completed{
+  color: yellow;
+}
+.completed{
+  color: green !important;
+}
+.dropped-off{
+  color: red;
 }

@@ -1,3 +1,7 @@
+import dj_database_url
+import dotenv
+import django_heroku
+
 """
 Django settings for strona_heroku project.
 
@@ -15,6 +19,9 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -25,13 +32,12 @@ SECRET_KEY = 'x37-&mhf#5rog+_ye=e2tglqvv2i^f!yq*+jgsc!$e%y+8be_n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
+ALLOWED_HOSTS = ['projekty-tomek-goralski.herokuapp.com','localhost']
 # Application definition
 
 INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
+    'kontakt.apps.KontaktConfig',
     'projects.apps.ProjectsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -49,8 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ROOT_URLCONF = 'strona_heroku.urls'
 
 TEMPLATES = [
@@ -75,12 +83,8 @@ WSGI_APPLICATION = 'strona_heroku.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
@@ -120,8 +124,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 TTEMPLATE_DIRS = (
     PROJECT_PATH + '/templates/',
 )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
+django_heroku.settings(locals())
+del DATABASES['default']['OPTIONS']['sslmode']

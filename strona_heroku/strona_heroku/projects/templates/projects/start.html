@@ -1,0 +1,29 @@
+{% load static %}
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'start_zad/start.css' %}">
+</head>
+<body>
+  <div class="middle parent">
+    <form method="POST" class="child">
+      {% csrf_token %}
+        <label for='login-field'>Login</label><br>
+        <input type="text" id='id_username' name="login-field"><br>
+
+        <label for="password-field">Hasło</label><br>
+        <input type="password" name="password-field" id="id_password"><br>
+
+        <label for="age-check">Przedział wiekowy</label><br>
+        <select id="age" name="age" size="3">
+            <option class='wider-option' value="1">18-25</option>
+            <option class='wider-option' value="2">26-35</option>
+            <option class='wider-option' value="3">36-45</option>
+        </select><br>
+
+        <label class='check' ><input class='check' type="checkbox"> Przeczytałem regulamin</label><br>
+        <label class='check'><input class='check' type="checkbox"> Wyrażam zgodę na przetwarzanie moich danych</label><br>
+        <label class='check'><input class='check' type="checkbox" checked disabled> Należy się szósteczka</label><br>
+
+        <input type="submit" value='Send' class="myButton">
+    </form>
+  </div>
+</body>

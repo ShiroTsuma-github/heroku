@@ -13,7 +13,6 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username','Identyfikator', 'email', 'password1', 'password2','github','heroku']
 
-print(UserRegisterForm.github)
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
     github=forms.URLField()

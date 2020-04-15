@@ -17,10 +17,18 @@ from django.contrib import admin
 from django.urls import path
 from homepage import views as homepage_views
 from projects import views as projects_views
+from django.conf import settings
+from django.conf.urls.static import static
+from kontakt import views as kontakt_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',homepage_views.homepage,name='homepage'),
-    path('projects/',projects_views.projects,name='projects')
+    path('projects/',projects_views.projects,name='projects'),
+    path('contact/',kontakt_views.kontakt,name='kontakt'),
+    path('test_start/',projects_views.register,name='test_start'),
+    path('start/',projects_views.start,name='register_zad'),
     
-]
+    
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
