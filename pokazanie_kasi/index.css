@@ -1,0 +1,61 @@
+body{
+    background-image: url(https://cdn.theatlantic.com/thumbor/tzId8utKgWb2OKNzqv35HWWdbm0=/1920x1257/media/img/2019/12/10/WEL_Hylton_Oceans_lead/original.jpg);
+    background-size: auto;
+    opacity:1;
+    background-color: #0A0B0F;
+    background-attachment: fixed;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+.Header_div{
+    background-color: rgba(10, 11, 53, 0.856);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: solid rgb(16, 12, 51) 2px;
+}
+.main_div{
+    width: 80%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(10, 11, 53, 0.699);
+    color: rgba(255, 255, 255, 0.582);
+}
+header{
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    font-size: 32px;
+}
+.content{
+    padding:10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 60%;
+    letter-spacing:1px;
+    margin-bottom: 6%;
+}
+a:link{
+    color: red;
+}
+a:visited{
+    color: coral;
+}
+a:hover{
+    color: seagreen;
+}
+.content img{
+    position: absolute;
+    bottom: 58%;
+    left:62.5%;
+
+}
+b{
+    color: red;
+}

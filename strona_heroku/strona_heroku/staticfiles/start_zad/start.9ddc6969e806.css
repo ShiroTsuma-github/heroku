@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: aliceblue;
+}
+.middle{
+    margin-left: auto;
+    margin-right: auto;
+    top:0px;
+    width: 400px;
+    background-color:pink;
+    height: 1000px;
+}
+.parent{
+    position:relative;
+  }
+  
+  .child{
+    position: relative;
+    top: 100px;
+    left:10px;
+  }
+  input{
+      font-size: 24px;
+      padding: 2px;
+  }
+  .wider-option{
+      width: 150px;
+  }
+ 
+  .myButton {
+	background-color:#878787;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:7px 56px;
+	text-decoration:none;
+}
+.myButton:hover {
+	border:2px solid blue;
+}
+.check{
+    font-size: 14px;
+}

@@ -1,14 +1,15 @@
 {% extends "homepage/base.html" %}
 
 {% block content %}
+<form method="POST" id='password_to_files'>
 <article class="media content-section">
   <div class="media-body">
-    <h2><a class="article-title">"PHP GLOBALS "</a></h2>
+    <h2 class="pad_top_title"><a class="article-title">"PHP GLOBALS "</a></h2>
     <p class="article-content">Prezentacja działania SUPERGLOBALS w PHP.
     </p>
     <ul class="list">
       <li class="list2"><a class="nav-item nav-link" href="https://drive.google.com/open?id=1xJyWWG3VgRiSF6DFkaCDaEj3F9FVpejk">Link do PDF</a></li>
-      <li class="list2"><a class="nav-item nav-link"  href="#">Link do kodu</a></li>
+      <li class="list2"><a class="nav-item nav-link"  href="https://github.com/ShiroTsuma-github/heroku/tree/master/php_zmienne">Link do kodu</a></li>
       <li class="list2"><a class="nav-item nav-link" style='color:grey;' href="#">Link do strony z PHP [Brak]</a></li>
     <li class="list2"><a class="nav-item nav-link"style='color:green;' >Skończone</a>
   </ul>
@@ -16,7 +17,7 @@
 </article>
 <article class="media content-section">
   <div class="media-body">
-    <h2><a class="article-title">"Faktury – bo hajs musi się zgadzać :D"</a></h2>
+    <h2 class="pad_top_title"><a class="article-title">"Faktury – bo hajs musi się zgadzać :D"</a></h2>
     <p class="article-content">Obliczanie faktur w MYSQL i "próba" w MongoDB
     </p>
     <ul class="list">
@@ -28,7 +29,7 @@
 </article>
 <article class="media content-section">
   <div class="media-body">
-    <h2><a class="article-title">Formularz nowego użytkownika</a></h2>
+    <h2 class="pad_top_title"><a class="article-title">Formularz nowego użytkownika</a></h2>
     <p class="article-content">Podstawowy formularz do logowania,bez faktycznego zapisywania danych, stworzony tylko w celu lepszego zapoznania z CSS. Dodatkowo niekoniecznie udana próba tego samego z Django forms i crispy_forms(Brak wiedzy o formatowaniu z CSS w Django dla Crispy) 
     </p>
     <ul class="list">
@@ -40,7 +41,7 @@
 </article>
 <article class="media content-section">
   <div class="media-body">
-    <h2><a class="article-title">Normalizacja liczb</a></h2>
+    <h2 class="pad_top_title"><a class="article-title">Normalizacja liczb</a></h2>
     <p class="article-content">Program napisany w pythonie. Dla liczb z określonego zakresu przedstawia je jako wartości w zakresie od 0 do 1 z dokładnością do 4 miejsc po przecinku.
     </p>
     <ul class="list">
@@ -52,7 +53,7 @@
 </article>
   <article class="media content-section">
     <div class="media-body">
-      <h2><a class="article-title">Wahadło</a></h2>
+      <h2 class="pad_top_title"><a class="article-title">Wahadło</a></h2>
       <p class="article-content">Wahadło napisane w pythonie. W przypadku kroku [1] lub zakresu podzielnego przez krok nie występuje problem,bo wahadło zaczyna i kończy w tym samym punkcie, natomiast w przypadku niepodzielnego początek jest dobry, ale potem się to gubi. W razie znalezienia błędu proszę napisać na email.
       </p>
       <ul class="list">
@@ -64,7 +65,7 @@
   </article>
   <article class="media content-section">
     <div class="media-body">
-      <h2><a class="article-title">Automat z napojami</a></h2>
+      <h2 class="pad_top_title"><a class="article-title">Automat z napojami</a></h2>
       <p class="article-content">Automat napisany w pythonie. Nie jest w pełni zgodny z wymogami,ale wydaje mi się,
           że przejdzie, bo poza tym ma dodatkowe funkcje. Zapisuje w pliku,ponieważ nie ma sensu zapisywać jego operacje w bazie danych.Porzuciłem tłumaczenie tych danych,a natomiast zrobiłem, żeby były bardziej czytelne w pliku. W razie uwag kontaktować się na email z [Dane kontaktowe].
       </p>
